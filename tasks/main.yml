@@ -1,0 +1,15 @@
+---
+
+- name: install xinetd
+  yum:
+    pkg: xinetd
+
+- name: enable xinetd service and assure it is started
+  service:
+    name: xinetd
+    enabled: yes
+    state: started
+  tags:
+    - service
+
+...
